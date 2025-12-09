@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Arso Vreme za Tablice</string>
+    <string name="app_description">Weather application providing real-time weather information for wall-mounted displays</string>
+</resources>
