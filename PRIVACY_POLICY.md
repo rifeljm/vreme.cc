@@ -2,6 +2,15 @@
 
 **Zadnja posodobitev: december 2024**
 
+## Identifikacija
+
+Ta pravilnik o zasebnosti se nanaša na:
+
+- **Aplikacija:** Vreme CC
+- **Razvijalec:** Matej Rifelj
+
+_Opomba: Ime razvijalca mora biti enako kot v vašem Google Play Console seznamu._
+
 ## Pregled
 
 Vreme CC je preprosta vremenska aplikacija, ki prikazuje vremensko napoved za naslednjih 10 dni. Ta pravilnik o zasebnosti opisuje, kako obravnavamo vaše podatke in zasebnost pri uporabi naše aplikacije.
@@ -56,7 +65,7 @@ Ta pravilnik o zasebnosti lahko občasno posodobimo. O spremembah vas bomo obves
 
 ## Kontakt
 
-Če imate kakršnakoli vprašanja o tem pravilniku o zasebnosti, nas kontaktirajte na: [matej@rifelj.com]
+Če imate kakršnakoli vprašanja o tem pravilniku o zasebnosti, nas kontaktirajte na: matej@rifelj.com
 
 ---
 
