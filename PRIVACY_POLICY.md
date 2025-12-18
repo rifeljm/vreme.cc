@@ -56,7 +56,7 @@ Ta pravilnik o zasebnosti lahko občasno posodobimo. O spremembah vas bomo obves
 
 ## Kontakt
 
-Če imate kakršnakoli vprašanja o tem pravilniku o zasebnosti, nas kontaktirajte na: [vaš-email@domena.com]
+Če imate kakršnakoli vprašanja o tem pravilniku o zasebnosti, nas kontaktirajte na: [matej@rifelj.com]
 
 ---
 
