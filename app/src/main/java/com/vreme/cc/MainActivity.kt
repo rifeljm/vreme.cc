@@ -8,6 +8,7 @@ import android.view.View
 import android.view.WindowInsets
 import android.view.WindowInsetsController
 import android.view.WindowManager
+import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.activity.ComponentActivity
@@ -53,12 +54,19 @@ class MainActivity : ComponentActivity() {
 
         // Create and configure WebView
         webView = WebView(this)
-        webView.settings.javaScriptEnabled = true
-        webView.settings.domStorageEnabled = true
-        webView.settings.loadWithOverviewMode = true
-        webView.settings.useWideViewPort = true
-        webView.settings.allowFileAccessFromFileURLs = true
-        webView.settings.allowUniversalAccessFromFileURLs = true
+        val settings = webView.settings
+        settings.javaScriptEnabled = true
+        settings.domStorageEnabled = true
+        settings.loadWithOverviewMode = true
+        settings.useWideViewPort = true
+        settings.allowFileAccessFromFileURLs = true
+        settings.allowUniversalAccessFromFileURLs = true
+        
+        // Disable all caching to always load fresh content
+        settings.cacheMode = WebSettings.LOAD_NO_CACHE
+        // Clear cache on startup
+        webView.clearCache(true)
+        webView.clearHistory()
         
         webView.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
@@ -75,8 +83,10 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-        // Load the HTML file from assets
-        webView.loadUrl("https://vreme.u3pm.com/")
+        // Load the website - always load fresh (no cache)
+        webView.loadUrl("https://app.vreme.cc/")
+        
+        // Set WebView as content view
         setContentView(webView)
         
         // Keep screen on for 24/7 operation
@@ -127,6 +137,8 @@ class MainActivity : ComponentActivity() {
         if (wakeLock?.isHeld != true) {
             keepScreenOn()
         }
+        // Reload to get fresh content (bypass cache)
+        webView.reload()
     }
     
     override fun onConfigurationChanged(newConfig: Configuration) {

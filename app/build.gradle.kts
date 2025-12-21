@@ -12,8 +12,8 @@ android {
         applicationId = "com.vreme.cc"
         minSdk = 24
         targetSdk = 35
-        versionCode = 6
-        versionName = "1.0.5"
+        versionCode = 12
+        versionName = "1.0.11"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -37,6 +37,10 @@ android {
                 "proguard-rules.pro"
             )
             signingConfig = signingConfigs.getByName("release")
+            // Generate native debug symbols for crash analysis
+            ndk {
+                debugSymbolLevel = "FULL"
+            }
         }
     }
     compileOptions {
